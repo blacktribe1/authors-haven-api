@@ -64,3 +64,5 @@ elasticsearch-populate:
 elasticsearch-rebuild:
 	docker compose -f local.yml exec api python manage.py search_index --rebuild
 
+make coverage-html:
+	docker compose -f local.yml run --rm api pytest -p no:warnings --cov=. --cov-report html
