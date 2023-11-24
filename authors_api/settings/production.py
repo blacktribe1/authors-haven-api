@@ -1,14 +1,14 @@
 from .base import *  # noqa
 from .base import env
 
-ADMINS = [("Alpha Omondi Ogilo", "api.imperfect@gmail.com")]
+ADMINS = [("Xavier Nyaga", "xaviern4@gmail.com")]
 
 # TODO add domain names of the production server
-CSRF_TRUSTED_ORIGINS = ["https://trainingwebdev.com"]
+CSRF_TRUSTED_ORIGINS = ["https://fabex.shop"]
 
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["trainingwebdev.com"])
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["fabex.shop"])
 
 ADMIN_URL = env("DJANGO_ADMIN_URL")
 
@@ -51,7 +51,7 @@ EMAIL_SUBJECT_PREFIX = env(
 
 EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend"
 EMAIL_HOST = "smtp.mailgun.org"
-EMAIL_HOST_USER = "postmaster@mg.trainingwebdev.com"
+EMAIL_HOST_USER = "postmaster@mg.fabex.shop"
 EMAIL_HOST_PASSWORD = env("SMTP_MAILGUN_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
